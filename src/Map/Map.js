@@ -29,25 +29,26 @@ export default class Map extends Component {
         div: 'a'
       }
     ];
-    const [sanju, helosanju] = useState(0);
 
-    const RenderData = Data.map((sanjay, i) => {
-      return (
-        <div>
-          <h1>{Data[i].name}</h1>
-
-          <h1>{Data[i].age}</h1>
-
-          <h1>{Data[i].div}</h1>
-        </div>
-      );
-    });
+    // const RenderData =
 
     return (
       <div>
-        {RenderData}
-        <h1>{sanju}</h1>
-        <button onClick={() => helosanju(sanju + 1)}>click here</button>
+        {Data.map((sanjay, i) => {
+          return (
+            <div>
+              <h1>{Data[i].name}</h1>
+
+              <h1>{Data[i].age}</h1>
+
+              <h1>{Data[i].div}</h1>
+            </div>
+          );
+        })}
+
+        {/* {RenderData} */}
+        {/* <h1>{sanju}</h1>
+        <button onClick={() => helosanju(sanju + 1)}>click here</button> */}
       </div>
     );
   }
